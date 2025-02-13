@@ -1,0 +1,25 @@
+---
+import { Image } from "astro:assets";
+import BlankLayout from "../layouts/BlankLayout.astro";
+
+import mimo404 from "../assets/404.svg";
+import { Button } from "../components/react/Button";
+---
+
+<BlankLayout title="404 | Mine de rien" description="Page non trouvée">
+    <div
+    class="mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center gap-8 text-center"
+  >
+    <Image src={mimo404} width={600} alt="Illustration 404" />
+    <div>
+      <h1 class="text-4xl font-bold">
+        Oups ! Il semblerait que vous soyez perdu...
+      </h1>
+      <p>
+        Il est possible que la page que vous recherchiez ai déménagé ou n'existe
+        plus.<br /> Aussi je vous invite à retourner à l'accueil.
+      </p>
+    </div>
+    <Button href="/">Retour à l'accueil</Button>
+  </div>
+</BlankLayout>
