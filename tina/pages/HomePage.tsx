@@ -18,7 +18,7 @@ const HomePage = (props: Props) => {
   const page = data.page;
 
   return (
-    <main data-tina-field={tinaField(page, "body")}>
+    <main className="space-y-6" data-tina-field={tinaField(page, "body")}>
       <TinaMarkdown content={page.body} />
     </main>
   );

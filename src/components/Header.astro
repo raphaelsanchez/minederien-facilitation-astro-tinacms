@@ -1,68 +1,41 @@
 ---
-import HeaderLink from "./HeaderLink.astro";
 import config from "../content/config/config.json";
+import HeaderLink from "./HeaderLink.astro";
 import IconLink from "./react/IconLink";
+
+import { Image } from "astro:assets";
+import MinederienLogo from "../assets/minederien.svg";
 ---
 
-<header>
-	<nav>
-		<h2><a href="/">{config.seo.title}</a></h2>
-		<div class="internal-links">
-			{
-				config.nav.map((nav) => (
-					<HeaderLink href={nav.link}>{nav.title}</HeaderLink>
-				))
-			}
-		</div>
-		<div class="social-links">
+<header class="content-grid">
+	<div class="breakout flex items-center justify-between px-4 py-2">
+		<a href="/" class="max-w-[150px]" aria-label="Retour à l'accueil">
+			<Image src={MinederienLogo} width={150} height={86} fit="contain" alt="Minederien Logo" />
+			<span class="sr-only">{config.seo.title}</span>
+		</a>
+
+		<nav id="main-nav" aria-label="Menu principal">
+			<ul class="flex items-center gap-4">
+				{
+					config.nav.map((nav) => (
+						<li>
+							<HeaderLink class="px-2" href={nav.link}>{nav.title}</HeaderLink>
+						</li>
+					))
+				}
+			</ul>
+		</nav>
+	
+		<ul id="social-links" class="flex items-center gap-4" aria-label="Liens sociaux">
 			{
 				config?.contactLinks?.map((link) => {
 					return (
-						<IconLink {...link} />
+						<li>
+							<IconLink {...link} />
+						</li>
 					);
 				})
 			}
-		</div>
-	</nav>
+		</ul>
+	</div>
 </header>
-<style>
-	header {
-		margin: 0;
-		padding: 0 1em;
-		background: white;
-		box-shadow: 0 2px 8px rgba(var(--black), 5%);
-	}
-	h2 {
-		margin: 0;
-		font-size: 1em;
-	}
-
-	h2 a,
-	h2 a.active {
-		text-decoration: none;
-	}
-	nav {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-	nav a {
-		padding: 1em 0.5em;
-		color: var(--black);
-		border-bottom: 4px solid transparent;
-		text-decoration: none;
-	}
-	nav a.active {
-		text-decoration: none;
-		border-bottom-color: var(--accent);
-	}
-	.social-links,
-	.social-links a {
-		display: flex;
-	}
-	@media (max-width: 720px) {
-		.social-links {
-			display: none;
-		}
-	}
-</style>

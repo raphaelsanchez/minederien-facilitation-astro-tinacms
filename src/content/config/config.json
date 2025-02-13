@@ -2,7 +2,7 @@
   "seo": {
     "title": "Astro Blog + Tina",
     "description": "Welcome to my website!",
-    "siteOwner": "Your name here"
+    "siteOwner": "Mine de rien"
   },
   "nav": [
     {
@@ -20,19 +20,19 @@
   ],
   "contactLinks": [
     {
-      "title": "Twitter",
-      "link": "https://x.com/tinacms",
-      "icon": "TbBrandTwitter"
+      "title": "LinkedIn",
+      "link": "https://www.linkedin.com/in/emilie-allard/",
+      "icon": "LuLinkedin"
     },
     {
-      "title": "Docs",
-      "link": "https://tina.io/docs",
-      "icon": "TbBook2"
+      "title": "Instagram",
+      "link": "https://www.instagram.com/minederien.facilitation",
+      "icon": "LuInstagram"
     },
     {
-      "title": "GitHub",
-      "link": "https://github.com/tinacms/tinacms",
-      "icon": "TbBrandGithub"
+      "title": "Youtube",
+      "link": "https://www.youtube.com/@Minederien-facilitation",
+      "icon": "LuYoutube"
     }
   ]
 }

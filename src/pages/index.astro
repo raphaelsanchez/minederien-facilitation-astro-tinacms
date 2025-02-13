@@ -1,8 +1,6 @@
 ---
 import client from '../../tina/__generated__/client';
-
 // Load components
-import HomePage from "../../tina/pages/HomePage.tsx";
 import PageLayout from '../layouts/PageLayout.astro';
 // Load config
 
@@ -10,5 +8,15 @@ const data = await client.queries.page({relativePath: "home.mdx"});
 ---
 
 <PageLayout>
-    <HomePage {...data} client:tina />
+    <section class="content-grid relative h-fit">
+        <div class="breakout align-items-end grid grid-cols-1 gap-3 text-balance py-20 lg:grid-cols-10 lg:gap-8 lg:py-28 xl:py-20">
+            <h1 class="max-w-3xl text-4xl md:text-5xl lg:col-span-6 lg:text-6xl xl:text-7xl">Hello World</h1>
+            <div class="lg:col-span-4 flex flex-col relative justify-end gap-3">
+                <p class="text-2xl">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- <HomePage {...data} client:tina /> -->
 </PageLayout>

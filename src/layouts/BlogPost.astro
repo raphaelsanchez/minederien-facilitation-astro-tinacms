@@ -9,16 +9,12 @@ type Props = CollectionEntry<'blog'>['data'];
 const { title, description } = Astro.props;
 ---
 
-<html lang="en">
+<html lang="fr">
 	<head>
 		<BaseHead title={title} description={description} />
 	</head>
 
 	<body>
-
-        <div class="w-full bg-pink-400 text-white text-center py-2">
-            Blog Post Layout
-        </div>
 		<Header />
 		<main>
 			<slot />

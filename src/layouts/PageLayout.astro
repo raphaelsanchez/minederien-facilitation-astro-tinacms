@@ -7,14 +7,11 @@ import Header from '../components/Header.astro';
 import config from '../content/config/config.json';
 ---
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 	<head>
 		<BaseHead title={config.seo.title} description={config.seo.description} />
 	</head>
 	<body>
-        <div class="w-full bg-pink-400 text-white text-center py-2">
-            Page Layout
-        </div>
         <Header />
         <slot />
         <Footer />

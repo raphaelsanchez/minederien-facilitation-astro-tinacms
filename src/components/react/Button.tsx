@@ -30,9 +30,9 @@ export const Button = forwardRef<
     };
 
     const sizes = {
-      sm: "h-12 px-3 text-base",
-      md: "h-14 px-4 text-md",
-      lg: "h-16 px-6 text-lg",
+      sm: "h-12 px-4 text-base",
+      md: "h-14 px-6 text-md",
+      lg: "h-16 px-8 text-lg",
     };
 
     const styles = twMerge(

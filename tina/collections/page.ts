@@ -23,15 +23,43 @@ export const PageCollection: Collection = {
             required: true,
             templates: [
                 {
-                    name: 'Cta',
-                    label: 'Cta',
+                    name: 'cta',
+                    label: 'CTA',
                     fields: [
                         {
                             name: 'heading',
                             label: 'Heading',
                             type: 'string',
+                            required: true,
+                        },
+                        {
+                            name: 'description',
+                            label: 'Description',
+                            type: 'string',
+                            required: true,
+                            ui: {
+                                component: 'textarea',
+                            },
+                        },
+                        {
+                            name: 'align',
+                            label: 'Alignement',
+                            type: 'string',
+                            required: true,
+                            options: ['content', 'wide'],
+                            ui: {
+                                component: 'select',
+                            },
                         },
                     ],
+                    ui: {
+                        itemProps(item) {
+                            console.log('Item dans itemProps:', item)
+                            return {
+                                label: `CTA ${item.heading}`,
+                            }
+                        },
+                    },
                 },
             ],
         },

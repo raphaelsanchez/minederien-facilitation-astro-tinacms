@@ -2,7 +2,7 @@ import { tinaField, useTina } from "tinacms/dist/react";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
 
 // Load components
-import Cta from "../../src/components/react/Cta.tsx";
+import Cta from "../../src/components/react/CallToAction.tsx";
 import FormattedDate from "../../src/components/react/FormattedDate.tsx";
 
 // Load types
